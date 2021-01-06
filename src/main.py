@@ -85,7 +85,7 @@ def saveData():
     fname = gr.getFilename()
     if fname == '':
         fname = 'game.csv'
-    with open(fname, 'w') as f:
+    with open(fname, 'w', newline='') as f:
         if len(pitches) > 0:
             writer = csv.DictWriter(f, fieldnames=pitches[0].keys())
             writer.writeheader()
