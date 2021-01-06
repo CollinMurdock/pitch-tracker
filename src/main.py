@@ -214,29 +214,34 @@ def undoPitch(event):
     gr.undoPitch()
     updateGameReport(state)
 
+def main():
 
-updateGameReport(state)
+    updateGameReport(state)
 
-# bind events
-base.bind('<Configure>', sz.resize)
-base.bind('<Button-1>', recordPitchLocation)
-gr.undoButton.bind('<Button-1>', undoPitch)
-base.protocol("WM_DELETE_WINDOW", saveData)
+    # bind events
+    base.bind('<Configure>', sz.resize)
+    base.bind('<Button-1>', recordPitchLocation)
+    gr.undoButton.bind('<Button-1>', undoPitch)
+    base.protocol("WM_DELETE_WINDOW", saveData)
 
-# binding buttons
-for button in bw.strikeInputs:
-    button.bind('<Button-1>', recordPitchResult)
-for button in bw.ballInputs:
-    button.bind('<Button-1>', recordPitchResult)
-for button in bw.hitInputs:
-    button.bind('<Button-1>', recordPitchResult)
-for button in bw.outInputs:
-    button.bind('<Button-1>', recordPitchResult)
-for button in bw.buntInputs:
-    button.bind('<Button-1>', recordPitchResult)
+    # binding buttons
+    for button in bw.strikeInputs:
+        button.bind('<Button-1>', recordPitchResult)
+    for button in bw.ballInputs:
+        button.bind('<Button-1>', recordPitchResult)
+    for button in bw.hitInputs:
+        button.bind('<Button-1>', recordPitchResult)
+    for button in bw.outInputs:
+        button.bind('<Button-1>', recordPitchResult)
+    for button in bw.buntInputs:
+        button.bind('<Button-1>', recordPitchResult)
 
-bw.window.bind('<Return>', submitPitch)
-bw.submitButton.bind('<Button-1>', submitPitch)
+    bw.window.bind('<Return>', submitPitch)
+    bw.submitButton.bind('<Button-1>', submitPitch)
 
-base.attributes('-alpha', 0.3)
-base.mainloop()
+    base.attributes('-alpha', 0.3)
+    base.mainloop()
+
+
+if __name__ == '__main__':
+    main()
