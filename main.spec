@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['src\\main.py'],
-             pathex=['C:\\Users\\colli\\Desktop\\mu_softball\\Pitch-Location-Tracker'],
+             pathex=['C:\\Users\\colli\\Desktop\\mu_softball\\dev\\Pitch-Tracker'],
              binaries=[],
              datas=[],
              hiddenimports=[],
