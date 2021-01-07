@@ -26,6 +26,7 @@ current_pitch = None
 pitch_colors = {
     'Strike Looking': 'Red',
     'Strike Swinging': 'Red',
+    'Strike Swinging Ball': 'Red',
     'Foul Ball': 'Red',
     'Foul Out': 'Red',
 
