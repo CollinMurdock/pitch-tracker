@@ -46,7 +46,7 @@ class GameState:
         elif code in ['W', 'HBP']:
             self.walk()
 
-        elif code in ['GO', 'FO', 'LO', 'PO', 'SacF', 'FP', 'S/FC', 'SacB', 'B/O']:
+        elif code in ['GO', 'FO', 'LO', 'PO', 'SacF', 'FP', 'S/FC', 'SacB', 'B/O', 'FOUL/O']:
             self.out()
 
         elif code == 'DP':

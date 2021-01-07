@@ -201,8 +201,8 @@ def submitPitch(event):
     current_pitch = None
 
 def updateGameReport(state):
-    global home_team, away_team
-    gr.updateTitleLabel(home_team, away_team)
+    # global home_team, away_team
+    # gr.updateTitleLabel(home_team, away_team)
     gr.updateStateLabel(state.inning, state.outs, state.balls, state.strikes)
 
 def undoPitch(event):
