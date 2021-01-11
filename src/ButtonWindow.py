@@ -133,6 +133,11 @@ class ButtonWindow():
         base4.pack(side=tk.LEFT)
         self.stealInputs.append(base4)
 
+        # create out option 
+        out = tk.Radiobutton(self.stealInputFrame, text='Called Out', variable=self.stealBase, value=1)
+        out.pack(side=tk.LEFT)
+        self.stealInputs.append(out)
+
         # create label
         text = 'Player Number'
         lab = tk.Label(self.stealInputFrame, text=text)
@@ -140,6 +145,7 @@ class ButtonWindow():
 
         self.stealNumber = tk.Spinbox(self.stealInputFrame, from_=0, to=99)
         self.stealNumber.pack()
+
 
     def createBasePositionInputs(self):
         text = 'Base Position'

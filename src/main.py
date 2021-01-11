@@ -154,8 +154,8 @@ def submitPitch(event):
     bcode = base_position_codes[(b1,b2,b3)]
 
     # see if there was a steal
-    if bw.stealBase.get() > 1:
-        baseCodes = {2:'2B', 3:'3B', 4:'H'}
+    if bw.stealBase.get() > 0:
+        baseCodes = {1:'OUT', 2:'2B', 3:'3B', 4:'H'}
         current_pitch['stolen_base'] = baseCodes[bw.stealBase.get()] 
         current_pitch['steal_number']= bw.stealNumber.get() 
         # reset the steal base
@@ -190,6 +190,9 @@ def submitPitch(event):
     # update game state
     state.base_position = bcode
     state.updateGameState(current_pitch['pitch_result'])
+    if current_pitch['stolen_base'] == 'OUT':
+        print('called out')
+        state.out()
 
     # update game report window
     updateGameReport(state)
