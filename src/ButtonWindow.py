@@ -68,7 +68,7 @@ class ButtonWindow():
 
     def createStrikeInputs(self):
         text = 'Strikes'
-        lab = tk.Label(self.strikeInputFrame, text=text)
+        lab = tk.Label(self.strikeInputFrame, text=text, font='bold')
         lab.pack()
         texts = ['Strike Looking', 'Strike Swinging', 'Strike Swinging Ball', 'Foul Ball', 'Foul Out']
         for text in texts:
@@ -79,7 +79,7 @@ class ButtonWindow():
 
     def createBallInputs(self):
         text = 'Balls'
-        lab = tk.Label(self.ballInputFrame, text=text)
+        lab = tk.Label(self.ballInputFrame, text=text, font='bold')
         lab.pack()
         texts = ['Ball', 'Hit By Pitch', 'Walk']
         for text in texts:
@@ -89,7 +89,7 @@ class ButtonWindow():
 
     def createHitInputs(self):
         text = 'Hits'
-        lab = tk.Label(self.hitInputFrame, text=text)
+        lab = tk.Label(self.hitInputFrame, text=text, font='bold')
         lab.pack()
         texts = ['Single', "Single, Fielder's Choice", 'Double', 'Triple', 'Home Run']
         for text in texts:
@@ -99,7 +99,7 @@ class ButtonWindow():
 
     def createBuntInputs(self):
         text = 'Bunts'
-        lab = tk.Label(self.buntInputFrame, text=text)
+        lab = tk.Label(self.buntInputFrame, text=text, font='bold')
         lab.pack()
         texts = ['Bunt', 'Sac Bunt', 'Bunt Out (not sac)', 'Bunt Foul', 'Bunt no contact']
         for text in texts:
@@ -109,7 +109,7 @@ class ButtonWindow():
             
     def createOutInputs(self):
         text = 'Ball in Play Outs'
-        lab = tk.Label(self.outInputFrame, text=text)
+        lab = tk.Label(self.outInputFrame, text=text, font='bold')
         lab.pack()
         texts = ['Ground Out', 'Fly Out','Pop Out','Line Out','Sac Fly','Double Play','Triple Play','Force Out']
         for text in texts:
@@ -119,7 +119,7 @@ class ButtonWindow():
     
     def createStealInputs(self):
         text = 'Stolen Base'
-        lab = tk.Label(self.stealInputFrame, text=text)
+        lab = tk.Label(self.stealInputFrame, text=text, font='bold')
         lab.pack(side=tk.TOP)
 
         # create radio button for base
@@ -143,7 +143,7 @@ class ButtonWindow():
 
     def createBasePositionInputs(self):
         text = 'Base Position'
-        lab = tk.Label(self.basePositionInputFrame, text=text)
+        lab = tk.Label(self.basePositionInputFrame, text=text, font='bold')
         lab.pack()
 
         bvar1 = tk.IntVar()
@@ -164,7 +164,7 @@ class ButtonWindow():
 
     def createRunInputs(self):
         text = 'Runs'
-        lab = tk.Label(self.runInputFrame, text=text)
+        lab = tk.Label(self.runInputFrame, text=text, font='bold')
         lab.pack()
 
         self.runInput = tk.Spinbox(self.runInputFrame, from_=0, to=99)
