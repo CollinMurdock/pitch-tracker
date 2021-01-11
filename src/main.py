@@ -167,6 +167,11 @@ def submitPitch(event):
         current_pitch['stolen_base'] = ''
         current_pitch['steal_number']= ''
 
+    # get runs
+    runs = bw.runInput.get()
+    bw.runInput.delete(0, 'end')
+    bw.runInput.insert(0, 0)
+
     # fill pitch object
     current_pitch['base_position'] = bcode
     current_pitch['pitcher'] = gr.getPitcherNumber()
@@ -176,6 +181,7 @@ def submitPitch(event):
     current_pitch['outs'] = state.outs
     current_pitch['pitch_number'] = state.pitch_number
     current_pitch['inning'] = state.inning
+    current_pitch['resulting_runs'] = runs
     current_pitch['at_bat'] = gr.getAwayTeam() if state.inning_top else gr.getHomeTeam()
 
     state.pitch_number += 1

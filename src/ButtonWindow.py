@@ -54,6 +54,13 @@ class ButtonWindow():
         self.basePositions = [] # list of all ball inputs
         self.createBasePositionInputs()
 
+        # frame for entering runs
+        self.runInputFrame = tk.Frame(self.buttonFrame)
+        self.runInputFrame.pack()
+        self.runInput = None # list of all ball inputs
+        self.createRunInputs()
+
+
         # submit button 
         self.submitButton = tk.Button(self.buttonFrame, text='Submit Pitch')
         self.submitButton.pack()
@@ -155,6 +162,12 @@ class ButtonWindow():
         self.basePositions.append(bvar2)
         self.basePositions.append(bvar3)
 
+    def createRunInputs(self):
+        text = 'Runs'
+        lab = tk.Label(self.runInputFrame, text=text)
+        lab.pack()
 
+        self.runInput = tk.Spinbox(self.runInputFrame, from_=0, to=99)
+        self.runInput.pack()
 
     
