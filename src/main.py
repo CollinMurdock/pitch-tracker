@@ -192,7 +192,7 @@ def submitPitch(event):
     state.updateGameState(current_pitch['pitch_result'])
     if current_pitch['stolen_base'] == 'OUT':
         print('called out')
-        state.out()
+        state.cs()
 
     # update game report window
     updateGameReport(state)

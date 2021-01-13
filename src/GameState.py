@@ -96,6 +96,19 @@ class GameState:
             self.outs = 0
         else:
             self.outs += 1
+
+    def cs(self):
+        # caught stealing
+
+        if self.outs == 2:
+            if self.inning_top:
+                self.inning_top = False
+            else: 
+                self.inning_top = True
+                self.inning += 1
+            self.outs = 0
+        else:
+            self.outs += 1
     
     def dp(self):
         if self.strikes == 2:
