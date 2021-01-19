@@ -37,7 +37,7 @@ class GameState:
         if code in ['FOUL', 'B/FOUL']:
             self.foul()
                 
-        elif code == 'BALL':
+        elif code in ['BALL', 'WP']:
             self.ball()
 
         elif code in ['S', '2B', 'TR', 'HR', 'B']:

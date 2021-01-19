@@ -33,6 +33,7 @@ pitch_colors = {
     'Ball': 'Green',
     'Walk': 'Green',
     'Hit By Pitch': 'Green',
+    'Wild Pitch': 'Green',
 
     'Single': 'Blue',
     "Single, Fielder's Choice": 'Blue',

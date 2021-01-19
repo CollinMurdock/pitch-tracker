@@ -81,7 +81,7 @@ class ButtonWindow():
         text = 'Balls'
         lab = tk.Label(self.ballInputFrame, text=text, font='bold')
         lab.pack()
-        texts = ['Ball', 'Hit By Pitch', 'Walk']
+        texts = ['Ball', 'Hit By Pitch', 'Walk', 'Wild Pitch']
         for text in texts:
             b = tk.Button(self.ballInputFrame, text=text)
             self.ballInputs.append(b)

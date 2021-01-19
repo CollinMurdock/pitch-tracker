@@ -31,6 +31,9 @@ def determineCode(button_text, state):
     elif button_text == 'Hit By Pitch':
         result = 'HBP'
 
+    elif button_text == 'Wild Pitch':
+        result = 'WP'
+
     elif button_text == 'Walk':
         result = 'W'
 
