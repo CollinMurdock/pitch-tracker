@@ -54,7 +54,7 @@ class ButtonWindow():
         self.basePositions = [] # list of all ball inputs
         self.createBasePositionInputs()
 
-        # frame for entering runs
+        # frame for entering runs batted in
         self.runInputFrame = tk.Frame(self.buttonFrame)
         self.runInputFrame.pack()
         self.runInput = None # list of all ball inputs
@@ -169,7 +169,7 @@ class ButtonWindow():
         self.basePositions.append(bvar3)
 
     def createRunInputs(self):
-        text = 'Runs'
+        text = 'Runs batted in'
         lab = tk.Label(self.runInputFrame, text=text, font='bold')
         lab.pack()
 

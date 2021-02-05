@@ -73,6 +73,10 @@ class GameReport:
 
     def createInputs(self):
 
+        # save button
+        self.saveButton = tk.Button(self.window, text='Save Data')
+        self.saveButton.pack()
+
         # team inputs
         self.home_input_frame = tk.Frame(self.window)
         self.home_input_frame.pack()

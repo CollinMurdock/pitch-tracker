@@ -82,7 +82,7 @@ sz = StrikeZone(400,600,base,pitches)
 gr = GameReport(base, pitches)
 bw = ButtonWindow(base) 
 
-def saveData():
+def saveData(event):
     global pitches
     fname = gr.getFilename()
     if fname == '':
@@ -94,7 +94,6 @@ def saveData():
             for pitch in pitches:
                 writer.writerow(pitch)
     
-    base.destroy()
 
 
 def recordPitchLocation(event):
@@ -232,7 +231,7 @@ def main():
     base.bind('<Configure>', sz.resize)
     base.bind('<Button-1>', recordPitchLocation)
     gr.undoButton.bind('<Button-1>', undoPitch)
-    base.protocol("WM_DELETE_WINDOW", saveData)
+    gr.saveButton.bind('<Button-1>', saveData)
 
     # binding buttons
     for button in bw.strikeInputs:
