@@ -11,6 +11,13 @@ class ButtonWindow():
         self.buttonFrame = tk.Frame(self.window)
         self.buttonFrame.pack()
 
+        # frame for pitch type
+        self.pitchTypeInputFrame = tk.Frame(self.buttonFrame)
+        self.pitchTypeInputFrame.pack()
+        self.pitchTypeInputs = [] # list of all strike inputs
+        self.pitchType = tk.IntVar()
+        self.createPitchTypeInputs()
+
         # frame for strikes
         self.strikeInputFrame = tk.Frame(self.buttonFrame)
         self.strikeInputFrame.pack()
@@ -65,6 +72,16 @@ class ButtonWindow():
         self.submitButton = tk.Button(self.buttonFrame, text='Submit Pitch')
         self.submitButton.pack()
 
+
+    def createPitchTypeInputs(self):
+        text = 'Pitch Type'
+        lab = tk.Label(self.pitchTypeInputFrame, text=text, font='bold')
+        lab.pack(side=tk.TOP)
+
+        # create radio button for pitch type 
+        changeup = tk.Radiobutton(self.pitchTypeInputFrame, text='Changeup', variable=self.pitchType, value=1)
+        changeup.pack(side=tk.LEFT)
+        self.pitchTypeInputs.append(changeup)
 
     def createStrikeInputs(self):
         text = 'Strikes'

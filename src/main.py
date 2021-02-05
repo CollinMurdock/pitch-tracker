@@ -160,10 +160,15 @@ def submitPitch(event):
         current_pitch['steal_number']= bw.stealNumber.get() 
         # reset the steal base
         bw.stealBase.set(0)
-        
     else: 
         current_pitch['stolen_base'] = ''
         current_pitch['steal_number']= ''
+
+    # get pitch type
+    pitchTypeCodes = {0:'', 1:'OFF'}
+    pitchType = pitchTypeCodes[bw.pitchType.get()]
+    bw.pitchType.set(0)
+
 
     # get runs
     runs = bw.runInput.get()
@@ -182,6 +187,7 @@ def submitPitch(event):
     current_pitch['resulting_runs'] = runs
     current_pitch['at_bat'] = gr.getAwayTeam() if state.inning_top else gr.getHomeTeam()
     current_pitch['pitching_team'] = gr.getHomeTeam() if state.inning_top else gr.getAwayTeam()
+    current_pitch['pitch_type'] = pitchType
 
     state.pitch_number += 1
     pitches.append(current_pitch)
